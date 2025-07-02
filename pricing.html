@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pricing & Info - PastelDev</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --pink-light: #ffeaf4;
+      --pink-mid: #ffbde3;
+      --pink-dark: #ffa0d4;
+      --bg-gradient: linear-gradient(135deg, #ffeaf4, #fff3fa);
+      --text-main: #663c5f;
+      --text-muted: #87627a;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--bg-gradient);
+      margin: 0;
+      padding: 60px 20px;
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      overflow-x: hidden; /* keep horizontal scroll off */
+      overflow-y: auto;   /* allow vertical scroll */
+    }
+
+    h1 {
+      color: #c26f95;
+      font-size: 2.4rem;
+      margin-bottom: 15px;
+      text-shadow: 1px 1px 2px #ffe2f0;
+    }
+
+    h2 {
+      color: var(--pink-dark);
+      margin-top: 30px;
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    ul {
+      text-align: left;
+      max-width: 400px;
+      margin: 0 auto 30px;
+      padding-left: 20px;
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    ul li {
+      margin-bottom: 12px;
+    }
+
+    .card {
+      background: #fff8fc;
+      padding: 40px 30px;
+      border-radius: 24px;
+      box-shadow: 0 12px 28px rgba(247, 178, 203, 0.3);
+      max-width: 600px;
+      width: 90%;
+      text-align: center;
+      animation: fadeIn 1s ease-out;
+      z-index: 10;
+    }
+
+    .button {
+      background: var(--pink-mid);
+      color: #823c64;
+      padding: 14px 28px;
+      border-radius: 14px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-decoration: none;
+      display: inline-block;
+      margin: 10px auto;
+      box-shadow: 0 4px 12px rgba(255, 183, 219, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .button:hover {
+      background: var(--pink-dark);
+      transform: scale(1.05);
+    }
+
+    /* Sparkles */
+    .sparkle {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #fff0fa;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #ffccec;
+      animation: sparkle 3s infinite ease-in-out;
+    }
+
+    @keyframes sparkle {
+      0% {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.2);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+    }
+
+    /* Emojis float */
+    .floating-emoji {
+      position: absolute;
+      font-size: 2rem;
+      opacity: 0.1;
+      animation: float 20s linear infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(-120vh) rotate(360deg); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Emojis -->
+  <div class="floating-emoji" style="top:90%; left:10%;">💌</div>
+  <div class="floating-emoji" style="top:95%; left:30%;">💿</div>
+  <div class="floating-emoji" style="top:100%; left:60%;">🍰</div>
+  <div class="floating-emoji" style="top:105%; left:80%;">💸</div>
+
+  <!-- Sparkles -->
+  <div class="sparkle" style="top:20%; left:15%;"></div>
+  <div class="sparkle" style="top:60%; left:70%;"></div>
+  <div class="sparkle" style="top:75%; left:30%;"></div>
+
+  <!-- Back button -->
+  <a href="javascript:history.back()" class="button" style="position: absolute; top: 20px; left: 20px; padding: 10px 18px; font-size: 0.95rem;">⬅️ Back</a>
+
+  <!-- Card Content -->
+  <div class="card">
+    <h1>Pricing & Info 💸✨</h1>
+    <p>Here’s my website commissions and what you get:</p>
+
+    <h2>🌼 Basic Package - $20</h2>
+    <ul>
+      <li>1-page responsive website</li>
+      <li>Desired design</li>
+      <li>Mobile & desktop friendly</li>
+      <li>1 round of revisions</li>
+    </ul>
+
+    <h2>🌷 Standard Package - $40</h2>
+    <ul>
+      <li>Up to 3 pages</li>
+      <li>Custom colors & fonts</li>
+      <li>Contact form setup</li>
+      <li>2 rounds of revisions</li>
+    </ul>
+
+    <h2>🎀 Premium Package - $70</h2>
+    <ul>
+      <li>Up to 5 pages</li>
+      <li>Advanced animations & effects</li>
+      <li>SEO basic setup</li>
+      <li>Unlimited revisions for 7 days</li>
+    </ul>
+
+    <p>✨ Ready to get started? Hit the button below to place an order or DM me on TikTok!</p>
+
+    <a href="order.html" class="button">💖 Order Now</a>
+  </div>
+</body>
+</html>

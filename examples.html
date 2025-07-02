@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Examples - PastelDev</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --pink-light: #ffeaf4;
+      --pink-mid: #ffbde3;
+      --pink-dark: #ffa0d4;
+      --bg-gradient: linear-gradient(135deg, #ffeaf4, #fff3fa);
+      --text-main: #663c5f;
+      --text-muted: #87627a;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--bg-gradient);
+      margin: 0;
+      padding: 60px 20px;
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      overflow-x: hidden; /* keep horizontal scroll off */
+      overflow-y: auto;   /* allow vertical scroll */
+    }
+
+    h1 {
+      color: #c26f95;
+      font-size: 2.4rem;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 2px #ffe2f0;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      max-width: 700px;
+      width: 100%;
+      z-index: 10;
+    }
+
+    .card {
+      background: #fff8fc;
+      border-radius: 24px;
+      box-shadow: 0 12px 28px rgba(247, 178, 203, 0.3);
+      overflow: hidden;
+      animation: fadeIn 1s ease-out;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-bottom: 2px solid var(--pink-mid);
+    }
+
+    .card-content {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .card-title {
+      font-size: 1.3rem;
+      color: var(--pink-dark);
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .card-link {
+      background: var(--pink-mid);
+      color: #823c64;
+      padding: 12px 26px;
+      border-radius: 14px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(255, 183, 219, 0.4);
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .card-link:hover {
+      background: var(--pink-dark);
+      transform: scale(1.05);
+    }
+
+    .button {
+      background: var(--pink-mid);
+      color: #823c64;
+      padding: 12px 24px;
+      border-radius: 14px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(255, 183, 219, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .button:hover {
+      background: var(--pink-dark);
+      transform: scale(1.05);
+    }
+
+    /* Sparkles */
+    .sparkle {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #fff0fa;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #ffccec;
+      animation: sparkle 3s infinite ease-in-out;
+    }
+
+    @keyframes sparkle {
+      0% { opacity: 0; transform: scale(0.5); }
+      50% { opacity: 1; transform: scale(1.2); }
+      100% { opacity: 0; transform: scale(0.5); }
+    }
+
+    /* Floating Emojis */
+    .floating-emoji {
+      position: absolute;
+      font-size: 2rem;
+      opacity: 0.1;
+      animation: float 20s linear infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(-120vh) rotate(360deg); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Emojis -->
+  <div class="floating-emoji" style="top:95%; left:15%;">🌸</div>
+  <div class="floating-emoji" style="top:98%; left:35%;">🎀</div>
+  <div class="floating-emoji" style="top:100%; left:65%;">📱</div>
+  <div class="floating-emoji" style="top:102%; left:80%;">🧁</div>
+
+  <!-- Sparkles -->
+  <div class="sparkle" style="top:10%; left:20%;"></div>
+  <div class="sparkle" style="top:60%; left:75%;"></div>
+  <div class="sparkle" style="top:85%; left:40%;"></div>
+
+  <!-- Back button -->
+  <a href="javascript:history.back()" class="button" style="position: absolute; top: 20px; left: 20px;">⬅️ Back</a>
+
+  <!-- Page Title -->
+  <h1>✨ Website Examples ✨</h1>
+
+  <!-- Examples -->
+  <div class="container">
+    <div class="card">
+      <img src="images/oc.png" alt="OC Template Preview" />
+      <div class="card-content">
+        <div class="card-title">🌟 OC Site Template</div>
+        <a href="https://pasteldev0.github.io/OcTemplate/" target="_blank" class="card-link">View Site</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/intro.png" alt="Intro Template Preview" />
+      <div class="card-content">
+        <div class="card-title">📌 Intro Card Template</div>
+        <a href="https://pasteldev0.github.io/AbtmMeTemplate/" target="_blank" class="card-link">View Site</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/shop.png" alt="Shop Template Preview" />
+      <div class="card-content">
+        <div class="card-title">🛒 Shop Template</div>
+        <a href="https://pasteldev0.github.io/ShopTemplate/" target="_blank" class="card-link">View Site</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
